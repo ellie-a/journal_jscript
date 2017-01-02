@@ -20,7 +20,8 @@ Entry.prototype.getTeaser = function(body) {
   for (var i= 0; i < 8; i++) {
     newArray.push(bodyArray[i]);
   }
-  return newArray;
+  outputString = newArray.join(" ");
+  return outputString;
 };
 
 exports.entryModule = Entry;
