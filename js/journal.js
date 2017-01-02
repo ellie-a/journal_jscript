@@ -14,4 +14,13 @@ Entry.prototype.letterCount = function() {
   return letterQuantity;
 };
 
+Entry.prototype.getTeaser = function(body) {
+  var bodyArray = this.body.split(" ");
+  var newArray = [];
+  for (var i= 0; i < 8; i++) {
+    newArray.push(bodyArray[i]);
+  }
+  return newArray;
+};
+
 exports.entryModule = Entry;

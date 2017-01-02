@@ -15,6 +15,15 @@ Entry.prototype.letterCount = function() {
   return letterQuantity;
 };
 
+Entry.prototype.getTeaser = function(body) {
+  var bodyArray = this.body.split(" ");
+  var newArray = [];
+  for (var i= 0; i < 8; i++) {
+    newArray.push(bodyArray[i]);
+  }
+  return newArray;
+};
+
 exports.entryModule = Entry;
 
 },{}],2:[function(require,module,exports){
@@ -30,8 +39,9 @@ $(document).ready(function() {
       console.log(new_entry);
       var wordcount = new_entry.wordCount();
       var lettercount = new_entry.letterCount();
+      var teaser = new_entry.getTeaser();
 
-      $('#journal-output').append(title + "<br>" + body);
+      $('#journal-output').append(title + "<br>" + teaser);
       $('#wordcount').append(wordcount);
       $('#lettercount').append(lettercount);
   });

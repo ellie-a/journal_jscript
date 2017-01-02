@@ -10,8 +10,9 @@ $(document).ready(function() {
       console.log(new_entry);
       var wordcount = new_entry.wordCount();
       var lettercount = new_entry.letterCount();
+      var teaser = new_entry.getTeaser();
 
-      $('#journal-output').append(title + "<br>" + body);
+      $('#journal-output').append(title + "<br>" + teaser);
       $('#wordcount').append(wordcount);
       $('#lettercount').append(lettercount);
   });
