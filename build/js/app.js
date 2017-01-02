@@ -3,7 +3,7 @@
 function Entry(title, body) {
   this.title = title;
   this.body = body;
-};
+}
 
 Entry.prototype.wordCount = function() {
   var word_count = this.body.split(" ").length;
@@ -23,10 +23,12 @@ $(document).ready(function() {
       var title = $('#title').val();
       var body = $('#body').val();
       var new_entry = new Entry(title, body);
+      console.log(new_entry);
+      var count = new_entry.wordCount();
 
 
       $('#journal-output').append(title + "<br>" + body);
-      $('#wordcount').append(new_entry.wordCount);
+      $('#wordcount').append(count);
   });
 });
 
