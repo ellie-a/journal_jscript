@@ -8,11 +8,12 @@ $(document).ready(function() {
       var body = $('#body').val();
       var new_entry = new Entry(title, body);
       console.log(new_entry);
-      var count = new_entry.wordCount();
-
+      var wordcount = new_entry.wordCount();
+      var lettercount = new_entry.letterCount();
 
       $('#journal-output').append(title + "<br>" + body);
-      $('#wordcount').append(count);
+      $('#wordcount').append(wordcount);
+      $('#lettercount').append(lettercount);
   });
 });
 

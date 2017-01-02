@@ -9,5 +9,9 @@ Entry.prototype.wordCount = function() {
   return word_count;
 };
 
+Entry.prototype.letterCount = function() {
+  var letterQuantity = this.body.replace(/[^a-z]/gmi, "").split("").length;
+  return letterQuantity;
+};
 
 exports.entryModule = Entry;
